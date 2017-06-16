@@ -1,0 +1,33 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script src="https://unpkg.com/vue"></script>
+        <!-->挂载点<!-->
+        <div id="app">
+            <!-->ViewModel 定义数据该如何显示<!-->
+            {{method}} {{man}}
+            <!-->使用@click来绑定点击事件<!-->
+            <button @click="clickFunction">wtmsb</button>
+        </div>
+        <script>
+            // 实例化Vue类，得到vm对象
+            // el字段表示挂载点
+            // data对象用来定义数据（变量）
+            // methods对象用来定义方法（函数）
+            const vm = new Vue({
+                el:'#app',
+                data: {
+                    method:'Fuck',
+                    man:'王正直'
+                },
+                methods: {
+                    clickFunction : function(){
+                        this.method = '摸'
+                        this.man = 'Rua'
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
